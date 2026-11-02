@@ -1,0 +1,402 @@
+{{#> layout page="typography" title="Typography" description="Hummingbird's typography system is built on a solid foundation of sensible defaults, with a focus on readability and usability."}}
+
+  <section id="font-family" data-toc="Font family">
+    {{> section-header title="Font family" description="The kit uses Figtree from Google Fonts. Change it in one place with the --font-sans theme variable." docs="customize/theming"}}
+    <div class="grid gap-6 rounded-2xl border border-subtle p-8 md:grid-cols-[auto_1fr] md:items-center">
+      <p class="mb-0 text-9xl leading-none font-semibold">Aa</p>
+      <div>
+        <p class="mb-2 text-2xl font-semibold">Figtree</p>
+        <p class="mb-4 text-muted">ABCDEFGHIJKLMNOPQRSTUVWXYZ<br />abcdefghijklmnopqrstuvwxyz<br />0123456789 !@#$%^&amp;*()</p>
+        <div class="flex flex-wrap gap-2">
+          <span class="badge badge-subtle-neutral font-light">Light 300</span>
+          <span class="badge badge-subtle-neutral font-normal">Regular 400</span>
+          <span class="badge badge-subtle-neutral font-medium">Medium 500</span>
+          <span class="badge badge-subtle-neutral font-semibold">Semibold 600</span>
+          <span class="badge badge-subtle-neutral font-bold">Bold 700</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="headings" data-toc="Headings">
+    {{> section-header title="Headings" docs="content/typography#headings"}}
+    {{#example}}
+      <h1>Heading 1</h1>
+      <h2>Heading 2</h2>
+      <h3>Heading 3</h3>
+      <h4>Heading 4</h4>
+      <h5>Heading 5</h5>
+      <h6>Heading 6</h6>
+    {{/example}}
+  </section>
+
+  <section id="text-colors" data-toc="Text colors">
+    {{> section-header title="Text colors" docs="content/typography#text-colors"}}
+    {{#example}}
+      <p class="text-primary">This is primary text</p>
+      <p class="text-secondary">This is secondary text</p>
+      <p class="text-success">This is success text</p>
+      <p class="text-warning">This is warning text</p>
+      <p class="text-danger">This is danger text</p>
+      <p class="text-info">This is info text</p>
+      <p class="text-subtle">This is subtle text</p>
+      <p class="text-muted">This is muted text</p>
+      <p class="text-default">This is default text</p>
+      <p class="text-highlight">This is highlight text</p>
+      <p class="text-emphasis">This is emphasis text</p>
+    {{/example}}
+  </section>
+
+  <section id="font-sizes" data-toc="Font sizes">
+    {{> section-header title="Font sizes" docs="content/typography#font-sizes"}}
+    {{#example}}
+      <p class="text-xs">This is a sample text</p>
+      <p class="text-sm">This is a sample text</p>
+      <p class="text-base">This is a sample text</p>
+      <p class="text-lg">This is a sample text</p>
+      <p class="text-xl">This is a sample text</p>
+      <p class="text-2xl">This is a sample text</p>
+      <p class="text-3xl">This is a sample text</p>
+    {{/example}}
+  </section>
+
+  <section id="font-weight" data-toc="Font weight">
+    {{> section-header title="Font weight" docs="content/typography#font-weight"}}
+    {{#example class="space-y-2"}}
+      <p class="font-thin">This text is very thin.</p>
+      <p class="font-extralight">This text is extra light.</p>
+      <p class="font-light">This text is light.</p>
+      <p class="font-normal">This text is normal weight.</p>
+      <p class="font-medium">This text is medium weight.</p>
+      <p class="font-semibold">This text is semi-bold.</p>
+      <p class="font-bold">This text is bold.</p>
+      <p class="font-extrabold">This text is extra bold.</p>
+      <p class="font-black">This text is very heavy (black).</p>
+    {{/example}}
+  </section>
+
+  <section id="text-alignment" data-toc="Text alignment">
+    {{> section-header title="Text alignment" docs="content/typography#text-alignment"}}
+    {{#example class="space-y-4 [&_span]:text-danger"}}
+      <p class="text-left"><span>text-left</span> aligns text to the left.</p>
+      <p class="text-center"><span>text-center</span> centers the text.</p>
+      <p class="text-right"><span>text-right</span> aligns text to the right.</p>
+      <p class="text-justify"><span>text-justify</span> stretches text to align both left and right edges.</p>
+      <p class="text-start"><span>text-start</span> aligns text to the start based on text direction.</p>
+      <p class="text-end"><span>text-end</span> aligns text to the end based on text direction.</p>
+    {{/example}}
+  </section>
+
+  <section id="text-wrap" data-toc="Text wrap">
+    {{> section-header title="Text wrap" docs="content/typography#text-wrap"}}
+    {{#example class="space-y-5 max-w-90 mx-auto overflow-hidden"}}
+      <p class="text-wrap border border-danger/40"><strong>text-wrap</strong> - This text wraps onto the next line when it reaches the container width.</p>
+      <p class="text-nowrap border border-danger/40"><strong>text-nowrap</strong> - This text stays on one line and does not wrap.</p>
+    {{/example}}
+  </section>
+
+  <section id="text-transform" data-toc="Text transform">
+    {{> section-header title="Text transform" docs="content/typography#text-transform"}}
+    {{#example}}
+      <p class="lowercase">Lowercase text</p>
+      <p class="uppercase">Uppercase text</p>
+      <p class="capitalize">Capitalized text</p>
+    {{/example}}
+  </section>
+
+  <section id="text-decoration" data-toc="Text decoration">
+    {{> section-header title="Text decoration" docs="content/typography#text-decoration"}}
+    {{#example}}
+      <p class="underline">This text is underlined.</p>
+      <p class="overline">This text has an overline.</p>
+      <p class="line-through">This text is crossed out.</p>
+      <p class="no-underline">This text has no decoration.</p>
+      <p>This <a href="#" class="no-underline hover:underline">link underlines</a> on hover.</p>
+      <p class="underline decoration-pink-500">Underline with pink decoration</p>
+      <p class="underline decoration-wavy">This text has a wavy underline.</p>
+      <p class="underline underline-offset-8">This text has a bigger underline offset.</p>
+      <p class="underline decoration-4">This text has a thicker underline.</p>
+    {{/example}}
+  </section>
+
+  <section id="line-height" data-toc="Line height">
+    {{> section-header title="Line height" docs="content/typography#line-height"}}
+    {{#example class="space-y-5 max-w-120 mx-auto"}}
+      <p class="leading-none">This block uses no extra line spacing, causing the lines of text to appear very close together and making longer content harder to read.</p>
+      <p class="text-base/6">This text uses a base font size with a fixed line height of 1.5, providing a compact but readable spacing suitable for UI copy and short content.</p>
+      <p class="leading-8">This paragraph applies a line height of 2rem, creating more vertical space between lines and improving overall clarity and readability for longer multiline text blocks.</p>
+      <p class="leading-10">This example uses a custom line height of 40px, resulting in more spacious line spacing that works well for large text, emphasis-heavy layouts, and prominent headings.</p>
+    {{/example}}
+  </section>
+
+  <section id="letter-spacing" data-toc="Letter spacing">
+    {{> section-header title="Letter spacing" docs="content/typography#letter-spacing"}}
+    {{#example class="space-y-4"}}
+      <p class="tracking-tighter">Letters are very tight.</p>
+      <p class="tracking-tight">Letters are a bit tight.</p>
+      <p class="tracking-normal">Letters have normal spacing.</p>
+      <p class="tracking-wide">Letters are spaced wider.</p>
+      <p class="tracking-wider">Letters are spaced even wider.</p>
+      <p class="tracking-widest">Letters are very widely spaced.</p>
+      <p class="tracking-[5px]">Letters have custom 5px spacing.</p>
+    {{/example}}
+  </section>
+
+  <section id="truncating-text" data-toc="Truncating text">
+    {{> section-header title="Truncating text" docs="content/typography#truncating-text"}}
+    {{#example class="max-w-120 px-0! mx-auto border-x border-danger/40 rounded-none [&_p]:mb-0"}}
+      <p class="truncate">This is a short paragraph demonstrating text truncation in Tailwind when content overflows its container width.</p>
+    {{/example}}
+  </section>
+
+  <section id="line-clamp" data-toc="Line clamp">
+    {{> section-header title="Line clamp" docs="content/typography#line-clamp"}}
+    {{#example class="max-w-120 px-0! mx-auto border-x border-danger/40 rounded-none [&_p]:mb-0"}}
+      <p class="line-clamp-3">
+        This example uses an even longer block of text to show how three lines of
+        content can be displayed before truncation occurs. This approach is useful
+        when you want to show more context while still maintaining consistent
+        spacing and preventing excessively tall content blocks.
+      </p>
+    {{/example}}
+  </section>
+
+  <section id="list" data-toc="List">
+    {{> section-header title="List" docs="content/typography#list"}}
+    {{#example class="space-y-5"}}
+      <div>
+        <span class="mb-3 font-mono text-xs font-medium text-muted">list-disc</span>
+        <ul class="list-inside list-disc">
+          <li>Apples are delicious and healthy.</li>
+          <li>Mountains offer breathtaking views.</li>
+          <li>Coding improves problem-solving skills.</li>
+        </ul>
+      </div>
+
+      <div>
+        <span class="mb-3 font-mono text-xs font-medium text-muted">list-decimal</span>
+        <ul class="list-inside list-decimal">
+          <li>First step: gather all ingredients.</li>
+          <li>Second step: preheat the oven.</li>
+          <li>Third step: mix and bake carefully.</li>
+        </ul>
+      </div>
+
+      <div>
+        <span class="mb-3 font-mono text-xs font-medium text-muted">list-none</span>
+        <ul class="list-inside list-none">
+          <li>Sunsets paint the sky beautifully.</li>
+          <li>Books open doors to new worlds.</li>
+          <li>Flowers brighten up any room.</li>
+        </ul>
+      </div>
+    {{/example}}
+  </section>
+
+  <section id="vertical-align" data-toc="Vertical align">
+    {{> section-header title="Vertical align" docs="content/typography#vertical-align"}}
+    {{#example class="space-y-10 max-w-140 mx-auto"}}
+      <div class="relative mx-auto leading-none">
+        <span class="inline-block h-8 w-0 align-baseline">
+          <span class="absolute top-0 h-8 w-full border-t border-b border-dashed border-danger/40"></span>
+          <span class="absolute top-0 h-4 w-full border-b border-dashed border-danger/30"></span>
+        </span>
+        <span class="relative z-10 px-4 font-medium text-gray-700 dark:text-gray-200">
+          This text is aligned to the baseline</span
+        >
+      </div>
+
+      <div class="relative mx-auto leading-none">
+        <span class="inline-block h-8 w-0 align-top">
+          <span class="absolute top-0 h-8 w-full border-t border-b border-dashed border-danger/30"></span>
+          <span class="absolute top-0 h-4 w-full border-b border-dashed border-danger/40"></span>
+        </span>
+        <span class="relative z-10 px-4 font-medium text-gray-700 dark:text-gray-200">
+          This text is aligned to the top</span
+        >
+      </div>
+
+      <div class="relative mx-auto leading-none">
+        <span class="inline-block h-8 w-0 align-middle">
+          <span class="absolute top-0 h-8 w-full border-t border-b border-dashed border-danger/30"></span>
+          <span class="absolute top-0 h-4 w-full border-b border-dashed border-danger/40"></span>
+        </span>
+        <span class="relative z-10 px-4 font-medium text-gray-700 dark:text-gray-200">
+          This text is aligned to the middle</span
+        >
+      </div>
+
+      <div class="relative mx-auto leading-none">
+        <span class="inline-block h-8 w-0 align-bottom">
+          <span class="absolute top-0 h-8 w-full border-t border-b border-dashed border-danger/30"></span>
+          <span class="absolute top-0 h-4 w-full border-b border-dashed border-danger/40"></span>
+        </span>
+        <span class="relative z-10 px-4 font-medium text-gray-700 dark:text-gray-200">
+          This text is aligned to the bottom</span
+        >
+      </div>
+
+      <div class="relative mx-auto leading-none">
+        <span class="inline-block h-8 w-0 align-text-top">
+          <span class="absolute top-0 h-8 w-full border-t border-b border-dashed border-danger/30"></span>
+          <span class="absolute top-0 h-4 w-full border-b border-dashed border-danger/40"></span>
+        </span>
+        <span class="relative z-10 px-4 font-medium text-gray-700 dark:text-gray-200">
+          This text is aligned to the top of the parent element's font</span
+        >
+      </div>
+
+      <div class="relative mx-auto leading-none">
+        <span class="inline-block h-8 w-0 align-text-bottom">
+          <span class="absolute top-0 h-8 w-full border-t border-b border-dashed border-danger/30"></span>
+          <span class="absolute top-0 h-4 w-full border-b border-dashed border-danger/40"></span>
+        </span>
+        <span class="relative z-10 px-4 font-medium text-gray-700 dark:text-gray-200">
+          This text is aligned to the bottom of the parent element's font</span
+        >
+      </div>
+    {{/example}}
+  </section>
+
+  <section id="text-shadow" data-toc="Text shadow">
+    {{> section-header title="Text shadow" docs="content/typography#text-shadow"}}
+    {{#example class="[&_p]:text-xl"}}
+      <p class="text-shadow-2xs">Extra extra small text shadow</p>
+      <p class="text-shadow-xs">Extra small text shadow</p>
+      <p class="text-shadow-sm">Small text shadow</p>
+      <p class="text-shadow-md">Medium text shadow</p>
+      <p class="text-shadow-lg">Large text shadow</p>
+      <p class="text-shadow-lg/20">Large shadow with 20% opacity</p>
+      <p class="text-shadow-lg/30">Large shadow with 30% opacity</p>
+    {{/example}}
+  </section>
+
+  <section id="gradient-text" data-toc="Gradient text">
+    {{> section-header title="Gradient text" docs="content/typography#gradient-text"}}
+    {{#example class="flex justify-center"}}
+      <h1 class="bg-linear-to-r from-pink-500 to-violet-500 bg-clip-text font-extrabold text-transparent inline-block">Hello World</h1>
+    {{/example}}
+  </section>
+
+  <section id="responsive-typography" data-toc="Responsive typography">
+    {{> section-header title="Responsive typography" docs="content/typography#responsive-typography"}}
+    {{#example}}
+      <h1 class="text-2xl md:text-4xl lg:text-5xl">Responsive Heading</h1>
+    {{/example}}
+  </section>
+
+  <section id="blockquote" data-toc="Blockquote">
+    {{> section-header title="Blockquote" description="Blockquote are used to highlight important quotations or excerpts within your content." docs="content/blockquote"}}
+
+    <h3>Basic blockquote</h3>
+    {{#example}}
+      <blockquote class="relative p-4">
+        <span class="text-subtle/50 absolute -start-3 -top-5 size-16 rotate-180 rtl:rotate-0">
+          <svg xmlns="http://www.w3.org/2000/svg" width="56" height="56" viewBox="0 0 16 16"><path fill="none" stroke="currentColor" stroke-linecap="round" d="M7 7.5H4c-.3 0-.5-.2-.5-.5V4c0-.3.2-.5.5-.5h3c.3 0 .5.2.5.5v3c0 .3-.2.5-.5.5zm6 0h-3c-.3 0-.5-.2-.5-.5V4c0-.3.2-.5.5-.5h3c.3 0 .5.2.5.5v3c0 .3-.2.5-.5.5zM12 12c1-1 1.5-2.5 1.5-4V6M6 12c1-1 1.5-2.5 1.5-4V6" stroke-width="1"/></svg>
+        </span>
+        <div class="relative z-1">
+          <p class="text-lg">
+            <em>
+              The journey of building great products starts with simple ideas, thoughtful design decisions, and a strong focus on user experience and long-term usability.
+            </em>
+          </p>
+        </div>
+      </blockquote>
+    {{/example}}
+
+    <h3>Blockquote with attribution</h3>
+    {{#example}}
+      <blockquote class="border-s-4 border-primary bg-primary-lighter p-4 sm:p-6 rounded-e-lg">
+        <p class="text-lg font-medium">
+          <em>
+            "There is nothing either good or bad, but thinking makes it so."
+          </em>
+        </p>
+        <footer class="mt-4 flex items-center gap-3 text-sm text-muted">
+          <div class="h-px w-6 bg-primary"></div>
+          William Shakespeare
+        </footer>
+      </blockquote>
+    {{/example}}
+
+    <h3>Testimonial blockquote</h3>
+    {{#example}}
+      <blockquote class="max-w-3xl mx-auto p-4">
+        <div class="flex items-center justify-center text-subtle/50">
+          <svg xmlns="http://www.w3.org/2000/svg" width="56" height="56" viewBox="0 0 16 16"><path fill="none" stroke="currentColor" stroke-linecap="round" d="M7 7.5H4c-.3 0-.5-.2-.5-.5V4c0-.3.2-.5.5-.5h3c.3 0 .5.2.5.5v3c0 .3-.2.5-.5.5zm6 0h-3c-.3 0-.5-.2-.5-.5V4c0-.3.2-.5.5-.5h3c.3 0 .5.2.5.5v3c0 .3-.2.5-.5.5zM12 12c1-1 1.5-2.5 1.5-4V6M6 12c1-1 1.5-2.5 1.5-4V6" stroke-width="1"/></svg>
+        </div>
+        <p class="text-lg text-center">
+          <em>
+            The journey of building great products starts with simple ideas, thoughtful design decisions, and a strong focus on user experience and long-term usability.
+          </em>
+        </p>
+        <footer class="mt-4 flex items-center justify-center gap-3">
+          <div class="avatar avatar-lg">
+            <img src="/images/avatar/avatar_4.webp" alt="Avatar" class="rounded-full" />
+          </div>
+          <div>
+            <p class="text-sm font-medium mb-0">John Doe</p>
+            <p class="text-xs text-muted mb-0">CEO, Example Inc.</p>
+          </div>
+        </footer>
+      </blockquote>
+    {{/example}}
+
+    <h3>Rating blockquote</h3>
+    {{#example}}
+      <blockquote class="max-w-3xl mx-auto p-4">
+        <div class="flex justify-center gap-1 text-warning mb-4">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"><path fill="currentColor" d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2L9.19 8.63L2 9.24l5.46 4.73L5.82 21z" stroke-width="0.4" stroke="currentColor"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"><path fill="currentColor" d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2L9.19 8.63L2 9.24l5.46 4.73L5.82 21z" stroke-width="0.4" stroke="currentColor"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"><path fill="currentColor" d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2L9.19 8.63L2 9.24l5.46 4.73L5.82 21z" stroke-width="0.4" stroke="currentColor"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"><path fill="currentColor" d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2L9.19 8.63L2 9.24l5.46 4.73L5.82 21z" stroke-width="0.4" stroke="currentColor"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"><path fill="currentColor" d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2L9.19 8.63L2 9.24l5.46 4.73L5.82 21z" stroke-width="0.4" stroke="currentColor"/></svg>
+        </div>
+        <p class="text-lg text-center">
+          <em>
+            "The journey of building great products starts with simple ideas, thoughtful design decisions, and a strong focus on user experience and long-term usability."
+          </em>
+        </p>
+        <footer class="mt-4 text-center gap-3">
+          <div class="avatar avatar-lg">
+            <img src="/images/avatar/avatar_4.webp" alt="Avatar" class="rounded-full" />
+          </div>
+            <p class="text-sm font-medium mt-2 mb-0">John Doe</p>
+            <p class="text-xs text-muted mb-0">CEO, Example Inc.</p>
+        </footer>
+      </blockquote>
+    {{/example}}
+
+    <h4>Center alignment</h4>
+    {{#example}}
+      <blockquote class="relative text-center p-4">
+        <span class="text-subtle/50 absolute -start-3 -top-5 size-16 rotate-180 rtl:rotate-0">
+          <svg xmlns="http://www.w3.org/2000/svg" width="56" height="56" viewBox="0 0 16 16"><path fill="none" stroke="currentColor" stroke-linecap="round" d="M7 7.5H4c-.3 0-.5-.2-.5-.5V4c0-.3.2-.5.5-.5h3c.3 0 .5.2.5.5v3c0 .3-.2.5-.5.5zm6 0h-3c-.3 0-.5-.2-.5-.5V4c0-.3.2-.5.5-.5h3c.3 0 .5.2.5.5v3c0 .3-.2.5-.5.5zM12 12c1-1 1.5-2.5 1.5-4V6M6 12c1-1 1.5-2.5 1.5-4V6" stroke-width="1"/></svg>
+        </span>
+        <div class="relative z-1">
+          <p class="text-lg">
+            <em>
+              The journey of building great products starts with simple ideas, thoughtful design decisions, and a strong focus on user experience and long-term usability.
+            </em>
+          </p>
+        </div>
+      </blockquote>
+    {{/example}}
+
+    <h4>Right alignment</h4>
+    {{#example}}
+      <blockquote class="relative text-end p-4">
+        <span class="text-subtle/50 absolute -start-3 -top-5 size-16 rotate-180 rtl:rotate-0">
+          <svg xmlns="http://www.w3.org/2000/svg" width="56" height="56" viewBox="0 0 16 16"><path fill="none" stroke="currentColor" stroke-linecap="round" d="M7 7.5H4c-.3 0-.5-.2-.5-.5V4c0-.3.2-.5.5-.5h3c.3 0 .5.2.5.5v3c0 .3-.2.5-.5.5zm6 0h-3c-.3 0-.5-.2-.5-.5V4c0-.3.2-.5.5-.5h3c.3 0 .5.2.5.5v3c0 .3-.2.5-.5.5zM12 12c1-1 1.5-2.5 1.5-4V6M6 12c1-1 1.5-2.5 1.5-4V6" stroke-width="1"/></svg>
+        </span>
+        <div class="relative z-1">
+          <p class="text-lg">
+            <em>
+              The journey of building great products starts with simple ideas, thoughtful design decisions, and a strong focus on user experience and long-term usability.
+            </em>
+          </p>
+        </div>
+      </blockquote>
+    {{/example}}
+  </section>
+{{/layout}}

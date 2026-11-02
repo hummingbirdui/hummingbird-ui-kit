@@ -1,0 +1,183 @@
+{
+  "name": "Hummingbird UI Kit",
+  "description": "A free, open-source UI kit built with Hummingbird and Tailwind CSS. Colors, themes, typography and 50 components, ready to copy into any HTML project.",
+  "docsUrl": "https://hbui.dev",
+  "githubUrl": "https://github.com/hummingbirdui/hummingbird",
+  "nav": [
+    {
+      "label": "Getting started",
+      "items": [
+        {
+          "page": "overview",
+          "name": "Overview",
+          "href": "index.html"
+        }
+      ]
+    },
+    {
+      "label": "Foundations",
+      "items": [
+        {
+          "page": "colors",
+          "name": "Colors",
+          "href": "pages/colors.html",
+          "description": "Semantic colors, surface and text tokens, and the full color palette."
+        },
+        {
+          "page": "themes",
+          "name": "Themes",
+          "href": "pages/themes.html",
+          "description": "Light and dark mode out of the box, plus eight prebuilt color themes."
+        },
+        {
+          "page": "typography",
+          "name": "Typography",
+          "href": "pages/typography.html",
+          "description": "Headings, display text, paragraphs, lists, blockquotes and inline text styles."
+        }
+      ]
+    },
+    {
+      "label": "Components",
+      "items": [
+        {
+          "page": "basic",
+          "name": "Basic",
+          "href": "pages/components/basic.html",
+          "description": "Buttons, badges, avatars, loaders, progress bars and other building blocks.",
+          "components": [
+            "Buttons",
+            "Button group",
+            "Badges",
+            "Avatars",
+            "Link",
+            "Close button",
+            "Divider",
+            "Loaders",
+            "Placeholders",
+            "Progress"
+          ]
+        },
+        {
+          "page": "navigation",
+          "name": "Navigation",
+          "href": "pages/components/navigation.html",
+          "description": "Navbars, tabs, breadcrumbs, pagination, list groups and scrollspy.",
+          "components": ["Navbar", "Navs & tabs", "Breadcrumb", "Pagination", "List group", "Scrollspy"]
+        },
+        {
+          "page": "overlays",
+          "name": "Overlays",
+          "href": "pages/components/overlays.html",
+          "description": "Modals, offcanvas panels, dropdowns, tooltips, popovers and toasts.",
+          "components": ["Modal", "Offcanvas", "Dropdowns", "Tooltips", "Popovers", "Toasts"]
+        },
+        {
+          "page": "feedback-data",
+          "name": "Feedback & Data",
+          "href": "pages/components/feedback-data.html",
+          "description": "Alerts, cards, accordions, carousels, tables and custom scrollbars.",
+          "components": ["Alerts", "Card", "Accordion", "Collapse", "Carousel", "Tables", "Custom scrollbar"]
+        },
+        {
+          "page": "content-layout",
+          "name": "Content & Layout",
+          "href": "pages/components/content-layout.html",
+          "description": "Grid, columns, containers, images, video, backgrounds and shadows.",
+          "components": ["Container", "Grid", "Columns", "Images", "Video", "Background", "Shadows"]
+        },
+        {
+          "page": "forms",
+          "name": "Forms",
+          "href": "pages/components/forms.html",
+          "description": "Inputs, selects, checkboxes, radios, switches, ranges and validation.",
+          "components": [
+            "Form control",
+            "Select",
+            "Checkbox",
+            "Radio",
+            "Switch",
+            "Range",
+            "File input",
+            "Input group",
+            "Floating labels",
+            "Validation"
+          ]
+        },
+        {
+          "page": "advanced-forms",
+          "name": "Advanced Forms",
+          "href": "pages/components/advanced-forms.html",
+          "description": "Searchable selects, date & time pickers, range sliders and file uploaders.",
+          "components": ["Advanced select", "Date & time picker", "Advanced range", "File uploader"]
+        }
+      ]
+    }
+  ],
+  "themes": [
+    {
+      "name": "Default",
+      "description": "The signature Hummingbird theme with balanced neutrals and vibrant blue accents.",
+      "primary": "oklch(65.2% 0.19 253.205)",
+      "secondary": "oklch(62.1% 0.253 305.351)",
+      "background": "oklch(100% 0 0)",
+      "neutral": "oklch(14.5% 0 0)"
+    },
+    {
+      "name": "Luxury",
+      "description": "Rich maroon and golden tones crafted for a refined, premium appearance.",
+      "primary": "oklch(49.1% 0.132 23.315)",
+      "secondary": "oklch(51% 0.09 65.986)",
+      "background": "oklch(99% 0.002 17.194)",
+      "neutral": "oklch(16.2% 0.003 17.51)"
+    },
+    {
+      "name": "Retro",
+      "description": "Warm vintage-inspired colors that bring a classic and timeless feel.",
+      "primary": "oklch(51.6% 0.064 252.928)",
+      "secondary": "oklch(54.4% 0.11 356.68)",
+      "background": "oklch(93% 0.034 88.062)",
+      "neutral": "oklch(16.6% 0.004 48.47)"
+    },
+    {
+      "name": "Arctic",
+      "description": "Cool blues and frosty tones inspired by modern winter landscapes.",
+      "primary": "oklch(53.4% 0.092 210.589)",
+      "secondary": "oklch(52.5% 0.15 285.02)",
+      "background": "oklch(97.7% 0.009 214.342)",
+      "neutral": "oklch(19.3% 0.029 20.064)"
+    },
+    {
+      "name": "Nature",
+      "description": "Fresh greens and earthy shades inspired by the natural world.",
+      "primary": "oklch(53.9% 0.137 144.589)",
+      "secondary": "oklch(55.5% 0.104 86.206)",
+      "background": "oklch(97.4% 0.014 88.683)",
+      "neutral": "oklch(20.1% 0.006 17.705)"
+    },
+    {
+      "name": "Dracula",
+      "description": "Deep purples and vivid pinks designed for bold, high-contrast interfaces.",
+      "primary": "oklch(63% 0.183 298.346)",
+      "secondary": "oklch(65% 0.172 347.629)",
+      "background": "oklch(93.7% 0.008 91.486)",
+      "neutral": "oklch(21.2% 0.015 18.38)"
+    },
+    {
+      "name": "Ember",
+      "description": "Warm oranges and amber tones that create an energetic, glowing aesthetic.",
+      "primary": "oklch(73.5% 0.115 55.253)",
+      "secondary": "oklch(66% 0.148 282.445)",
+      "background": "oklch(98.3% 0.009 106.568)",
+      "neutral": "oklch(27.4% 0.033 19.373)"
+    },
+    {
+      "name": "Midnight",
+      "description": "Deep blues and indigos designed for calm, modern dark experiences.",
+      "primary": "oklch(62.2% 0.121 267.224)",
+      "secondary": "oklch(61.5% 0.155 289.183)",
+      "background": "oklch(96.8% 0.01 273.357)",
+      "neutral": "oklch(25.5% 0.02 18.576)"
+    }
+  ]
+}

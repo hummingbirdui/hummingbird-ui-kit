@@ -1,0 +1,17 @@
+<div class="mb-6">
+  <div class="mb-1 flex items-center justify-between gap-4">
+    <h2 class="mb-0 text-2xl font-semibold">{{title}}</h2>
+    {{#if docs}}
+      <a
+        href="{{@root.site.docsUrl}}/docs/{{docs}}"
+        target="_blank"
+        rel="noopener"
+        class="btn btn-sm btn-text-neutral shrink-0"
+        aria-label="{{title}} documentation"
+      >
+        Docs {{> icons/external}}
+      </a>
+    {{/if}}
+  </div>
+  {{#if description}}<p class="mb-0 max-w-3xl text-muted">{{description}}</p>{{/if}}
+</div>

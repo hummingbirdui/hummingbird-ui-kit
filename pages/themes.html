@@ -1,0 +1,127 @@
+{{#> layout page="themes" title="Themes" description="Every Hummingbird component supports light and dark mode out of the box, and eight prebuilt color themes let you change the whole look with a single import."}}
+
+  <section id="light-dark-mode" data-toc="Light &amp; dark mode">
+    {{> section-header title="Light & dark mode" description="All colors are semantic CSS variables. Dark mode overrides the same variables, so switching needs no markup changes." docs="customize/dark-mode"}}
+
+    <div class="mb-8 flex flex-col gap-4 rounded-2xl border border-subtle bg-subtle p-6 sm:flex-row sm:items-center sm:justify-between">
+      <div>
+        <p class="mb-1 font-semibold">Try it</p>
+        <p class="mb-0 text-muted">
+          You're viewing the <strong class="dark:hidden">light</strong><strong class="hidden dark:inline">dark</strong> mode.
+          The whole kit switches when you toggle.
+        </p>
+      </div>
+      <button type="button" class="btn btn-primary shrink-0" data-theme-toggle-btn>
+        <span class="dark:hidden">Switch to dark</span>
+        <span class="hidden dark:inline">Switch to light</span>
+      </button>
+    </div>
+
+    {{#example}}
+      <div class="grid gap-6 md:grid-cols-2">
+        <div class="card">
+          <div class="card-body">
+            <div class="mb-4 flex items-center gap-3">
+              <div class="avatar avatar-lg">
+                <img src="/images/avatar/avatar_1.webp" alt="Avatar" class="rounded-full" />
+              </div>
+              <div>
+                <h5 class="card-title mb-0">Emma Watson</h5>
+                <p class="mb-0 text-sm text-muted">Product designer</p>
+              </div>
+              <span class="badge badge-subtle-success ms-auto">Online</span>
+            </div>
+            <p class="text-muted">Semantic tokens keep contrast and hierarchy consistent in both modes.</p>
+            <div class="flex gap-2">
+              <button type="button" class="btn btn-primary">Follow</button>
+              <button type="button" class="btn btn-outline-neutral">Message</button>
+            </div>
+          </div>
+        </div>
+        <div class="space-y-4">
+          <div class="alert alert-subtle-info" role="alert">Your changes were saved automatically.</div>
+          <div>
+            <label for="themeDemoEmail" class="form-label">Email address</label>
+            <input type="email" class="form-control" id="themeDemoEmail" placeholder="name@example.com" />
+          </div>
+          <div class="progress" role="progressbar" aria-label="Upload progress" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100">
+            <div class="progress-bar w-[65%]"></div>
+          </div>
+        </div>
+      </div>
+    {{/example}}
+
+    <h3>How it works</h3>
+    <p class="text-muted">
+      The kit uses class-based dark mode. Add this custom variant after importing Tailwind CSS and Hummingbird:
+    </p>
+    {{#code lang="css"}}
+      @import 'tailwindcss';
+      @import '@hummingbirdui/hummingbird';
+
+      @custom-variant dark (&:where(.dark, .dark *), .dark);
+    {{/code}}
+    <p class="text-muted">
+      Then set the class on <code>&lt;html&gt;</code> before the page renders. The saved preference wins, and the
+      system preference is the fallback. The toggle logic lives in <code>src/js/main.js</code>.
+    </p>
+    {{#code lang="html"}}
+      <script>
+        document.documentElement.classList.toggle(
+          'dark',
+          localStorage.theme === 'dark' ||
+            (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches),
+        );
+      </script>
+    {{/code}}
+  </section>
+
+  <section id="prebuilt-themes" data-toc="Prebuilt themes">
+    {{> section-header title="Prebuilt themes" description="Hummingbird ships eight hand-tuned color themes. Each one includes its own light and dark palette." docs="customize/theming"}}
+
+    <div class="grid gap-4 sm:grid-cols-2">
+      {{#each @root.site.themes}}
+        <div class="card">
+          <div class="card-body">
+            <div class="mb-4 flex gap-1.5">
+              <span class="size-8 rounded-md border border-default" style="background-color: {{primary}}" title="Primary"></span>
+              <span class="size-8 rounded-md border border-default" style="background-color: {{secondary}}" title="Secondary"></span>
+              <span class="size-8 rounded-md border border-default" style="background-color: {{background}}" title="Background"></span>
+              <span class="size-8 rounded-md border border-default" style="background-color: {{neutral}}" title="Neutral"></span>
+            </div>
+            <h5 class="card-title mb-1">{{name}}</h5>
+            <p class="mb-0 text-sm text-muted">{{description}}</p>
+          </div>
+        </div>
+      {{/each}}
+    </div>
+
+    <h3>Using a theme</h3>
+    <p class="text-muted">
+      The <strong>Default</strong> theme is included automatically. To use another one, import its CSS file after
+      Hummingbird in <code>src/css/style.css</code>. Import only one theme at a time.
+    </p>
+    {{#code lang="css"}}
+      @import 'tailwindcss';
+      @import '@hummingbirdui/hummingbird';
+
+      /* pick one */
+      @import '@hummingbirdui/hummingbird/src/themes/luxury.css';
+      /* @import '@hummingbirdui/hummingbird/src/themes/retro.css'; */
+      /* @import '@hummingbirdui/hummingbird/src/themes/arctic.css'; */
+      /* @import '@hummingbirdui/hummingbird/src/themes/nature.css'; */
+      /* @import '@hummingbirdui/hummingbird/src/themes/dracula.css'; */
+      /* @import '@hummingbirdui/hummingbird/src/themes/ember.css'; */
+      /* @import '@hummingbirdui/hummingbird/src/themes/midnight.css'; */
+    {{/code}}
+
+    <h3>Customizing tokens</h3>
+    <p class="text-muted">Override any variable in an <code>@theme</code> block to match your brand:</p>
+    {{#code lang="css"}}
+      @theme {
+        --color-primary: var(--color-emerald-600);
+        --background-color-default: var(--color-stone-50);
+      }
+    {{/code}}
+  </section>
+{{/layout}}

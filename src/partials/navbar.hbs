@@ -1,0 +1,41 @@
+<nav class="sticky top-0 z-1035 border-b border-subtle bg-default px-6 py-3.75 md:px-10">
+  <div class="container flex max-w-8xl items-center px-0">
+    <a class="navbar-brand me-4 flex items-center gap-2 py-1.25" href="{{@root.root}}index.html">
+      <img src="/src/assets/images/logo.svg" alt="Hummingbird logo" class="size-10" />
+      <span class="hidden text-xl font-semibold text-muted sm:inline">hummingbird</span>
+    </a>
+    <span class="badge badge-subtle-primary shrink-0">UI Kit</span>
+
+    <div class="ms-auto flex items-center gap-2">
+      <a
+        href="{{@root.site.docsUrl}}"
+        target="_blank"
+        rel="noopener"
+        class="nav-link hidden rounded-lg px-4 py-2 text-sm text-default hover:bg-muted sm:block"
+        >Documentation</a
+      >
+      <span class="mx-2 hidden h-8 border-l border-subtle sm:block"></span>
+      <button
+        type="button"
+        class="btn btn-circle btn-subtle-neutral"
+        data-theme-toggle-btn
+        aria-label="Toggle light/dark mode"
+        data-bs-toggle="tooltip"
+        data-bs-placement="bottom"
+        data-bs-title="Toggle light/dark mode"
+      >
+        {{> icons/bulb}}
+        {{> icons/bulb-off}}
+      </button>
+      <a
+        href="{{@root.site.githubUrl}}"
+        target="_blank"
+        rel="noopener"
+        class="btn btn-circle btn-subtle-neutral"
+        aria-label="GitHub"
+      >
+        {{> icons/github}}
+      </a>
+    </div>
+  </div>
+</nav>

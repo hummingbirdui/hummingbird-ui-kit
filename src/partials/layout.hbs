@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    {{> head}}
+  </head>
+  <body class="bg-default">
+    {{> navbar}}
+    {{> mobile-bar}}
+    <div class="px-6 sm:px-10">
+      <div class="mx-auto h-full max-w-8xl lg:grid lg:grid-cols-[15rem_1fr]">
+        {{> sidebar}}
+        <main class="min-w-0 {{#unless hideToc}}xl:grid xl:grid-cols-[1fr_16.75rem]{{/unless}}">
+          <div class="min-w-0 py-10 lg:ps-10 {{#unless hideToc}}xl:pe-10{{/unless}}">
+            {{#unless hideHeader}}
+              <h1 class="mb-4 text-4xl">{{title}}</h1>
+              <p class="mb-10 text-xl font-light">{{description}}</p>
+            {{/unless}}
+            <div class="kit-content">
+              {{> @partial-block}}
+            </div>
+            {{> pager}}
+          </div>
+          {{#unless hideToc}}
+            <aside class="sticky top-(--navbar-height) hidden h-max py-10 ps-6 xl:block">
+              <p class="ps-4 font-bold">On this page</p>
+              <!-- toc -->
+            </aside>
+          {{/unless}}
+        </main>
+      </div>
+    </div>
+    {{> footer}}
+    <script type="module" src="/src/js/main.js"></script>
+    {{#if script}}<script type="module" src="/src/js/{{script}}.js"></script>{{/if}}
+  </body>
+</html>

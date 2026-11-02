@@ -1,0 +1,1041 @@
+{{#> layout page="overlays" title="Overlays" description="Modals, offcanvas panels, dropdowns, tooltips, popovers and toasts."}}
+
+  <section id="modal" data-toc="Modal">
+    {{> section-header title="Modal" description="The Modal component creates accessible pop-up dialogs with customizable sizes and smooth animations for notifications, lightboxes, or custom content." docs="components/modal"}}
+
+    <h3>Example</h3>
+    {{#example class="flex justify-center"}}
+      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Demo modal</button>
+
+      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title text-base font-semibold" id="exampleModalLabel">Modal title</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              This is a modal window. You can add any content here—text, buttons, forms, or media.
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-subtle-neutral me-2" data-bs-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-subtle-primary">Confirm</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    {{/example}}
+
+    <h3>Static backdrop</h3>
+    {{#example class="flex justify-center"}}
+      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Static backdrop modal</button>
+
+      <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title text-base font-semibold" id="staticBackdropLabel">Modal title</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              This is a modal window. You can add any content here—text, buttons, forms, or media.
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-subtle-neutral me-2" data-bs-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-subtle-primary">Confirm</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    {{/example}}
+
+    <h3>Scrolling long content</h3>
+    {{#example class="flex justify-center"}}
+      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalScrollable">Demo modal</button>
+
+      <div class="modal fade" id="modalScrollable" tabindex="-1" aria-labelledby="modalScrollableLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title text-base font-semibold" id="modalScrollableLabel">Modal title</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body min-h-screen">
+              This is a modal window. You can add any content here—text, buttons, forms, or media.
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-subtle-neutral me-2" data-bs-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-subtle-primary">Confirm</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    {{/example}}
+    {{#example class="flex justify-center"}}
+      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalBodyScrollable">Demo modal</button>
+
+      <div class="modal fade" id="modalBodyScrollable" tabindex="-1" aria-labelledby="modalBodyScrollableLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title text-base font-semibold" id="modalBodyScrollableLabel">Modal title</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              This is a modal window. You can add any content here—text, buttons, forms, or media.
+              <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+              This content should appear at the bottom after you scroll.
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-subtle-neutral me-2" data-bs-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-subtle-primary">Confirm</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    {{/example}}
+
+    <h3>Vertically centered</h3>
+    {{#example class="flex justify-center flex-wrap gap-2"}}
+      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalVerticallyCentered">Vertically centered</button>
+
+      <div class="modal fade" id="modalVerticallyCentered" tabindex="-1" aria-labelledby="modalVerticallyCenteredLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title text-base font-semibold" id="modalVerticallyCenteredLabel">Modal title</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              This is a modal window. You can add any content here—text, buttons, forms, or media.
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-subtle-neutral me-2" data-bs-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-subtle-primary">Confirm</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalVerticallyCenteredScrollable">Vertically centered scrollable</button>
+
+      <div class="modal fade" id="modalVerticallyCenteredScrollable" tabindex="-1" aria-labelledby="modalVerticallyCenteredScrollableLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title text-base font-semibold" id="modalVerticallyCenteredScrollableLabel">Modal title</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              This is a modal window. You can add any content here—text, buttons, forms, or media.
+              <br/><br/><br/><br/><br/><br/><br/><br/><br/>
+              Just like that
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-subtle-neutral me-2" data-bs-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-subtle-primary">Confirm</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    {{/example}}
+
+    <h3>Toggle between modals</h3>
+    {{#example class="flex justify-center"}}
+      <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title text-base font-semibold" id="exampleModalToggleLabel">Modal 1</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              Show a second modal and hide this one with the button below.
+            </div>
+            <div class="modal-footer">
+              <button class="btn btn-primary" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal">Open second modal</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title text-base font-semibold" id="exampleModalToggleLabel2">Modal 2</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              Hide this modal and show the first with the button below.
+            </div>
+            <div class="modal-footer">
+              <button class="btn btn-primary" data-bs-target="#exampleModalToggle" data-bs-toggle="modal">Back to first</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <button class="btn btn-primary" data-bs-target="#exampleModalToggle" data-bs-toggle="modal">Open first modal</button>
+    {{/example}}
+
+    <h3>Optional sizes</h3>
+    {{#example class="flex justify-center flex-wrap gap-2"}}
+      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalXl">Extra Large modal</button>
+
+      <div class="modal fade" id="modalXl" tabindex="-1" aria-labelledby="modalXlLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title text-base font-semibold" id="modalXlLabel">Modal title</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              This is a modal window. You can add any content here—text, buttons, forms, or media.
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-subtle-neutral me-2" data-bs-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-subtle-primary">Confirm</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalLg">Large modal</button>
+
+      <div class="modal fade" id="modalLg" tabindex="-1" aria-labelledby="modalLgLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title text-base font-semibold" id="modalLgLabel">Modal title</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              This is a modal window. You can add any content here—text, buttons, forms, or media.
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-subtle-neutral me-2" data-bs-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-subtle-primary">Confirm</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalSm">Small modal</button>
+
+      <div class="modal fade" id="modalSm" tabindex="-1" aria-labelledby="modalSmLabel" aria-hidden="true">
+        <div class="modal-dialog modal-sm">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title text-base font-semibold" id="modalSmLabel">Modal title</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              This is a modal window. You can add any content here—text, buttons, forms, or media.
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-subtle-neutral me-2" data-bs-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-subtle-primary">Confirm</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    {{/example}}
+
+    <h3>Fullscreen modal</h3>
+    {{#example class="flex flex-wrap gap-2"}}
+      <!-- Full Screen Modal -->
+      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#fullscreenModal">Full screen</button>
+
+      <div class="modal fade" id="fullscreenModal" tabindex="-1" aria-labelledby="fullscreenModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-fullscreen">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title text-base font-semibold" id="fullscreenModalLabel">Full Screen Modal</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              This is a modal window. You can add any content here—text, buttons, forms, or media.
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-subtle-neutral me-2" data-bs-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-subtle-primary">Confirm</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Full Screen below sm -->
+      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#fullscreenSmModal">Full screen below sm</button>
+
+      <div class="modal fade" id="fullscreenSmModal" tabindex="-1" aria-labelledby="fullscreenSmModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-fullscreen-sm-down">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title text-base font-semibold" id="fullscreenSmModalLabel">Full Screen below sm</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              This is a modal window. You can add any content here—text, buttons, forms, or media.
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-subtle-neutral me-2" data-bs-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-subtle-primary">Confirm</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Full Screen below md -->
+      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#fullscreenMdModal">Full screen below md</button>
+
+      <div class="modal fade" id="fullscreenMdModal" tabindex="-1" aria-labelledby="fullscreenMdModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-fullscreen-md-down">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title text-base font-semibold" id="fullscreenMdModalLabel">Full Screen below md</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              This is a modal window. You can add any content here—text, buttons, forms, or media.
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-subtle-neutral me-2" data-bs-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-subtle-primary">Confirm</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Full Screen below lg -->
+      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#fullscreenLgModal">Full screen below lg</button>
+
+      <div class="modal fade" id="fullscreenLgModal" tabindex="-1" aria-labelledby="fullscreenLgModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-fullscreen-lg-down">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title text-base font-semibold" id="fullscreenLgModalLabel">Full Screen below lg</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              This is a modal window. You can add any content here—text, buttons, forms, or media.
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-subtle-neutral me-2" data-bs-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-subtle-primary">Confirm</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Full Screen below xl -->
+      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#fullscreenXlModal">Full screen below xl</button>
+
+      <div class="modal fade" id="fullscreenXlModal" tabindex="-1" aria-labelledby="fullscreenXlModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-fullscreen-xl-down">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title text-base font-semibold" id="fullscreenXlModalLabel">Full Screen below xl</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              This is a modal window. You can add any content here—text, buttons, forms, or media.
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-subtle-neutral me-2" data-bs-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-subtle-primary">Confirm</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Full Screen below 2xl -->
+      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#fullscreenXxlModal">Full screen below 2xl</button>
+
+      <div class="modal fade" id="fullscreenXxlModal" tabindex="-1" aria-labelledby="fullscreenXxlModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-fullscreen-2xl-down">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title text-base font-semibold" id="fullscreenXxlModalLabel">Full Screen below 2xl</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              This is a modal window. You can add any content here—text, buttons, forms, or media.
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-subtle-neutral me-2" data-bs-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-subtle-primary">Confirm</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    {{/example}}
+  </section>
+
+  <section id="offcanvas" data-toc="Offcanvas">
+    {{> section-header title="Offcanvas" description="Integrate concealed sidebars into projects for navigation, shopping carts, and various other uses, leveraging a few classes and the JavaScript plugin." docs="components/offcanvas"}}
+
+    <h3>Example</h3>
+    {{#example class="flex justify-center flex-wrap gap-2"}}
+      <a class="btn btn-primary" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
+        Link with href
+      </a>
+      <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+        Button with data-bs-target
+      </button>
+      <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+        <div class="offcanvas-header">
+          <h6 class="offcanvas-title font-semibold" id="offcanvasExampleLabel">Offcanvas</h6>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <div class="list-group bg-transparent p-0">
+            <a href="#" class="list-group-item list-group-item-action rounded-md active" aria-current="true">List Item One</a>
+            <a href="#" class="list-group-item list-group-item-action rounded-md">List Item Two</a>
+            <a href="#" class="list-group-item list-group-item-action rounded-md">List Item Three</a>
+            <a href="#" class="list-group-item list-group-item-action rounded-md">List Item Four</a>
+          </div>
+        </div>
+      </div>
+    {{/example}}
+
+    <h3>Body scrolling</h3>
+    {{#example class="text-center"}}
+      <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">Enable body scrolling</button>
+
+      <div class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+        <div class="offcanvas-header">
+          <h6 class="offcanvas-title font-semibold" id="offcanvasScrollingLabel">Offcanvas</h6>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <div class="list-group bg-transparent p-0">
+            <a href="#" class="list-group-item list-group-item-action rounded-md active" aria-current="true">List Item One</a>
+            <a href="#" class="list-group-item list-group-item-action rounded-md">List Item Two</a>
+            <a href="#" class="list-group-item list-group-item-action rounded-md">List Item Three</a>
+            <a href="#" class="list-group-item list-group-item-action rounded-md">List Item Four</a>
+          </div>
+        </div>
+      </div>
+    {{/example}}
+
+    <h3>Body scrolling and backdrop</h3>
+    {{#example class="text-center"}}
+      <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">Enable both scrolling & backdrop</button>
+
+      <div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
+        <div class="offcanvas-header">
+          <h6 class="offcanvas-title font-semibold" id="offcanvasWithBothOptionsLabel">Offcanvas</h6>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <div class="list-group bg-transparent p-0">
+            <a href="#" class="list-group-item list-group-item-action rounded-md active" aria-current="true">List Item One</a>
+            <a href="#" class="list-group-item list-group-item-action rounded-md">List Item Two</a>
+            <a href="#" class="list-group-item list-group-item-action rounded-md">List Item Three</a>
+            <a href="#" class="list-group-item list-group-item-action rounded-md">List Item Four</a>
+          </div>
+        </div>
+      </div>
+    {{/example}}
+
+    <h3>Static backdrop</h3>
+    {{#example class="text-center"}}
+      <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#staticBackdrop-2" aria-controls="staticBackdrop-2">Toggle static offcanvas</button>
+
+      <div class="offcanvas offcanvas-start" data-bs-backdrop="static" tabindex="-1" id="staticBackdrop-2" aria-labelledby="staticBackdropLabel-2">
+        <div class="offcanvas-header">
+          <h6 class="offcanvas-title font-semibold" id="staticBackdropLabel-2">Offcanvas</h6>
+          <button type="button" class="btn btn-icon ms-auto" data-bs-dismiss="offcanvas" aria-label="Close">
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <div class="list-group bg-transparent p-0">
+            <a href="#" class="list-group-item list-group-item-action rounded-md active" aria-current="true">List Item One</a>
+            <a href="#" class="list-group-item list-group-item-action rounded-md">List Item Two</a>
+            <a href="#" class="list-group-item list-group-item-action rounded-md">List Item Three</a>
+            <a href="#" class="list-group-item list-group-item-action rounded-md">List Item Four</a>
+          </div>
+        </div>
+      </div>
+    {{/example}}
+
+    <h3>Responsive</h3>
+    {{#example}}
+      <button class="btn btn-primary lg:hidden" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasResponsive" aria-controls="offcanvasResponsive">Toggle offcanvas</button>
+
+      <div class="alert alert-subtle-info hidden lg:block mb-4">Resize your browser to show the responsive offcanvas toggle.</div>
+
+      <div class="offcanvas-lg offcanvas-start" tabindex="-1" id="offcanvasResponsive" aria-labelledby="offcanvasResponsiveLabel">
+        <div class="offcanvas-header">
+          <h6 class="offcanvas-title font-semibold" id="offcanvasResponsiveLabel">Responsive offcanvas</h6>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <p class="mb-0">This is content within responsive offcanvas. The Responsive Offcanvas component adapts its behavior based on the screen size. It behaves like a sliding drawer on mobile and a static sidebar on larger breakpoints (lg and up)</p>
+        </div>
+      </div>
+    {{/example}}
+
+    <h3>Placement</h3>
+    {{#example class="text-center"}}
+      <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" aria-controls="offcanvasTop">Toggle top offcanvas</button>
+
+      <div class="offcanvas offcanvas-top" tabindex="-1" id="offcanvasTop" aria-labelledby="offcanvasTopLabel">
+        <div class="offcanvas-header">
+          <h6 class="offcanvas-title font-semibold" id="offcanvasTopLabel">Offcanvas Top</h6>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          ...
+        </div>
+      </div>
+    {{/example}}
+    {{#example class="text-center"}}
+      <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">Toggle right offcanvas</button>
+
+      <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+        <div class="offcanvas-header">
+          <h6 class="offcanvas-title font-semibold" id="offcanvasRightLabel">Offcanvas Right</h6>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          ...
+        </div>
+      </div>
+    {{/example}}
+    {{#example class="text-center"}}
+      <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom">Toggle bottom offcanvas</button>
+
+      <div class="offcanvas offcanvas-bottom" tabindex="-1" id="offcanvasBottom" aria-labelledby="offcanvasBottomLabel">
+        <div class="offcanvas-header">
+          <h6 class="offcanvas-title font-semibold" id="offcanvasBottomLabel">Offcanvas Bottom</h6>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          ...
+        </div>
+      </div>
+    {{/example}}
+  </section>
+
+  <section id="dropdowns" data-toc="Dropdowns">
+    {{> section-header title="Dropdowns" description="The Dropdowns component provides toggleable, accessible menus with simple classes and JavaScript for navigation or actions." docs="components/dropdowns"}}
+
+    <h3>Single button</h3>
+    {{#example class="text-center"}}
+      <div class="dropdown">
+        <button class="btn btn-subtle-neutral" type="button" data-bs-toggle="dropdown" aria-expanded="false">Dropdown</button>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="#">Profile</a></li>
+          <li><a class="dropdown-item" href="#">My Account</a></li>
+          <li><a class="dropdown-item" href="#">Dashboard</a></li>
+        </ul>
+      </div>
+    {{/example}}
+    {{#example class="text-center"}}
+      <div class="dropdown">
+        <a class="btn btn-subtle-neutral" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Dropdown link</a>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="#">Profile</a></li>
+          <li><a class="dropdown-item" href="#">My Account</a></li>
+          <li><a class="dropdown-item" href="#">Dashboard</a></li>
+        </ul>
+      </div>
+    {{/example}}
+
+    <h4>Centered dropdown</h4>
+    {{#example class="text-center"}}
+      <div class="dropdown-center">
+        <button class="btn btn-subtle-neutral" type="button" data-bs-toggle="dropdown" aria-expanded="false">Centered Dropdown</button>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="#">Profile</a></li>
+          <li><a class="dropdown-item" href="#">My Account</a></li>
+          <li><a class="dropdown-item" href="#">Dashboard</a></li>
+        </ul>
+      </div>
+    {{/example}}
+
+    <h4>Dropup</h4>
+    {{#example class="text-center"}}
+      <div class="dropup">
+        <button class="btn btn-subtle-neutral" type="button" data-bs-toggle="dropdown" aria-expanded="false">Dropup</button>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="#">Profile</a></li>
+          <li><a class="dropdown-item" href="#">My Account</a></li>
+          <li><a class="dropdown-item" href="#">Dashboard</a></li>
+        </ul>
+      </div>
+    {{/example}}
+
+    <h4>Dropup centered</h4>
+    {{#example class="text-center"}}
+      <div class="dropup-center dropup">
+        <button class="btn btn-subtle-neutral" type="button" data-bs-toggle="dropdown" aria-expanded="false">Dropup Centered</button>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="#">Profile</a></li>
+          <li><a class="dropdown-item" href="#">My Account</a></li>
+          <li><a class="dropdown-item" href="#">Dashboard</a></li>
+        </ul>
+      </div>
+    {{/example}}
+
+    <h4>Dropend</h4>
+    {{#example class="text-center"}}
+      <div class="dropend">
+        <button class="btn btn-subtle-neutral" type="button" data-bs-toggle="dropdown" aria-expanded="false">Dropend</button>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="#">Profile</a></li>
+          <li><a class="dropdown-item" href="#">My Account</a></li>
+          <li><a class="dropdown-item" href="#">Dashboard</a></li>
+        </ul>
+      </div>
+    {{/example}}
+
+    <h4>Dropstart</h4>
+    {{#example class="text-center"}}
+      <div class="dropstart">
+        <button class="btn btn-subtle-neutral" type="button" data-bs-toggle="dropdown" aria-expanded="false">Dropstart</button>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="#">Profile</a></li>
+          <li><a class="dropdown-item" href="#">My Account</a></li>
+          <li><a class="dropdown-item" href="#">Dashboard</a></li>
+        </ul>
+      </div>
+    {{/example}}
+
+    <h3>Dropdown with icon</h3>
+    {{#example class="text-center"}}
+      <div class="dropdown">
+        <button class="btn btn-subtle-neutral" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+          Dropdown
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><path fill="currentColor" fill-rule="evenodd" d="M7 9a1 1 0 0 0-.707 1.707l5 5a1 1 0 0 0 1.414 0l5-5A1 1 0 0 0 17 9z" clip-rule="evenodd"/></svg>
+        </button>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="#">Profile</a></li>
+          <li><a class="dropdown-item" href="#">My Account</a></li>
+          <li><a class="dropdown-item" href="#">Dashboard</a></li>
+        </ul>
+      </div>
+    {{/example}}
+
+    <h3>Menu alignment</h3>
+    {{#example class="text-center"}}
+      <div class="btn-group">
+        <button type="button" class="btn btn-subtle-neutral" data-bs-toggle="dropdown" aria-expanded="false">Right-aligned menu example</button>
+        <ul class="dropdown-menu dropdown-menu-end">
+          <li><button class="dropdown-item" type="button">Profile</button></li>
+          <li><button class="dropdown-item" type="button">My Account</button></li>
+          <li><button class="dropdown-item" type="button">Dashboard</button></li>
+        </ul>
+      </div>
+    {{/example}}
+
+    <h3>Responsive alignment</h3>
+    {{#example class="text-center"}}
+      <div class="btn-group">
+        <button type="button" class="btn btn-subtle-neutral" data-bs-toggle="dropdown" aria-expanded="false">Left-aligned but right aligned when large screen</button>
+        <ul class="dropdown-menu lg:dropdown-menu-end">
+          <li><button class="dropdown-item" type="button">Profile</button></li>
+          <li><button class="dropdown-item" type="button">My Account</button></li>
+          <li><button class="dropdown-item" type="button">Dashboard</button></li>
+        </ul>
+      </div>
+    {{/example}}
+
+    <h3>Menu header</h3>
+    {{#example class="text-center"}}
+      <div class="dropdown">
+        <button class="btn btn-subtle-neutral" type="button" data-bs-toggle="dropdown" aria-expanded="false">Dropdown</button>
+        <ul class="dropdown-menu">
+          <li><h6 class="dropdown-header">Dropdown header</h6></li>
+          <li><a class="dropdown-item" href="#">Profile</a></li>
+          <li><a class="dropdown-item" href="#">My Account</a></li>
+          <li><a class="dropdown-item" href="#">Dashboard</a></li>
+        </ul>
+      </div>
+    {{/example}}
+
+    <h3>Menu divider</h3>
+    {{#example class="text-center"}}
+      <div class="dropdown">
+        <button class="btn btn-subtle-neutral" type="button" data-bs-toggle="dropdown" aria-expanded="false">Dropdown</button>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="#">Profile</a></li>
+          <li><a class="dropdown-item" href="#">My Account</a></li>
+          <li><a class="dropdown-item" href="#">Dashboard</a></li>
+          <li><hr class="dropdown-divider" /></li>
+          <li><a class="dropdown-item" href="#">Sign Out</a></li>
+        </ul>
+      </div>
+    {{/example}}
+
+    <h3>Text</h3>
+    {{#example class="flex justify-center"}}
+      <div class="dropdown">
+        <button class="btn btn-subtle-neutral" type="button" data-bs-toggle="dropdown" aria-expanded="false">Dropdown</button>
+        <div class="dropdown-menu p-4 w-60">
+          <p class="mb-0">Some example text that’s free-flowing within the dropdown menu.</p>
+        </div>
+      </div>
+    {{/example}}
+
+    <h3>Dropdown options</h3>
+    {{#example class="flex justify-center gap-3"}}
+      <div class="dropdown">
+        <button type="button" class="btn btn-subtle-neutral" data-bs-toggle="dropdown" aria-expanded="false" data-bs-offset="10,20">Offset</button>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="#">Profile</a></li>
+          <li><a class="dropdown-item" href="#">My Account</a></li>
+          <li><a class="dropdown-item" href="#">Dashboard</a></li>
+        </ul>
+      </div>
+      <div class='dropdown flex gap-1'>
+        <button type="button" class="btn btn-subtle-neutral">Reference</button>
+        <button class='btn btn-subtle-neutral btn-square' type="button" data-bs-toggle="dropdown" aria-expanded="false" data-bs-reference="parent">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"><path fill="currentColor" d="M12 14.975q-.2 0-.375-.062T11.3 14.7l-4.6-4.6q-.275-.275-.275-.7t.275-.7t.7-.275t.7.275l3.9 3.9l3.9-3.9q.275-.275.7-.275t.7.275t.275.7t-.275.7l-4.6 4.6q-.15.15-.325.213t-.375.062" stroke-width="0.5" stroke="currentColor"/></svg>
+        </button>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="#">Profile</a></li>
+          <li><a class="dropdown-item" href="#">My Account</a></li>
+          <li><a class="dropdown-item" href="#">Dashboard</a></li>
+          <li><hr class="dropdown-divider" /></li>
+          <li><a class="dropdown-item" href="#">Sign Out</a></li>
+        </ul>
+      </div>
+    {{/example}}
+
+    <h3>Auto close behavior</h3>
+    {{#example class="flex flex-wrap justify-center gap-3"}}
+      <div class="relative">
+        <button class="btn btn-subtle-neutral" type="button" data-bs-toggle="dropdown" data-bs-auto-close="true" aria-expanded="false">Default dropdown</button>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="#">Menu item</a></li>
+          <li><a class="dropdown-item" href="#">Menu item</a></li>
+          <li><a class="dropdown-item" href="#">Menu item</a></li>
+        </ul>
+      </div>
+
+      <div class="relative">
+        <button class="btn btn-subtle-neutral" type="button" data-bs-toggle="dropdown" data-bs-auto-close="inside" aria-expanded="false">Clickable inside</button>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="#">Menu item</a></li>
+          <li><a class="dropdown-item" href="#">Menu item</a></li>
+          <li><a class="dropdown-item" href="#">Menu item</a></li>
+        </ul>
+      </div>
+
+      <div class="relative">
+        <button class="btn btn-subtle-neutral" type="button" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">Clickable outside</button>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="#">Menu item</a></li>
+          <li><a class="dropdown-item" href="#">Menu item</a></li>
+          <li><a class="dropdown-item" href="#">Menu item</a></li>
+        </ul>
+      </div>
+
+      <div class="relative">
+        <button class="btn btn-subtle-neutral" type="button" data-bs-toggle="dropdown" data-bs-auto-close="false" aria-expanded="false">Manual close</button>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="#">Menu item</a></li>
+          <li><a class="dropdown-item" href="#">Menu item</a></li>
+          <li><a class="dropdown-item" href="#">Menu item</a></li>
+        </ul>
+      </div>
+    {{/example}}
+  </section>
+
+  <section id="tooltips" data-toc="Tooltips">
+    {{> section-header title="Tooltips" description="The Tooltip component shows contextual pop-ups on hover, providing additional information with customizable positions and styling." docs="components/tooltips"}}
+
+    <h3>Basic example</h3>
+    {{#example class="text-center"}}
+      <button type="button" class="btn btn-subtle-neutral" data-bs-toggle="tooltip" data-bs-title="Tooltip">Tooltip</button>
+    {{/example}}
+
+    <h3>Directions</h3>
+    {{#example class="flex flex-wrap justify-center gap-2"}}
+      <button type="button" class="btn btn-subtle-neutral" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Tooltip on top">Tooltip on top</button>
+      <button type="button" class="btn btn-subtle-neutral" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="Tooltip on right">Tooltip on right</button>
+      <button type="button" class="btn btn-subtle-neutral" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Tooltip on bottom">Tooltip on bottom</button>
+      <button type="button" class="btn btn-subtle-neutral" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-title="Tooltip on left">Tooltip on left</button>
+    {{/example}}
+
+    <h3>Custom tooltip</h3>
+    {{#example class="text-center"}}
+      <button type="button" class="btn btn-subtle-neutral" data-bs-toggle="tooltip" data-bs-title="Custom Tooltip" data-bs-custom-class="custom-tooltip">Custom Tooltip</button>
+    {{/example}}
+
+    <h3>Disabled elements</h3>
+    {{#example class="text-center"}}
+      <span class='inline-block' tabindex="0" data-bs-toggle="tooltip" data-bs-title="Disabled tooltip">
+        <button class="btn btn-primary" type="button" disabled >Disabled button</button>
+      </span>
+    {{/example}}
+  </section>
+
+  <section id="popovers" data-toc="Popovers">
+    {{> section-header title="Popovers" description="Popovers provide brief, contextual information or actions when users hover, focus, or click on an element." docs="components/popovers"}}
+
+    <h3>Basic example</h3>
+    {{#example}}
+      <button type="button" class="btn btn-subtle-neutral" data-bs-toggle="popover" data-bs-content="Here’s some exciting content to explore and enjoy.">Toggle basic popover</button>
+    {{/example}}
+
+    <h3>Directions</h3>
+    {{#example class="flex flex-wrap justify-center gap-2"}}
+      <button type="button" class="btn btn-subtle-neutral" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-content="Top popover">
+        Popover on top
+      </button>
+      <button type="button" class="btn btn-subtle-neutral" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="right" data-bs-content="Right popover">
+        Popover on right
+      </button>
+      <button type="button" class="btn btn-subtle-neutral" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="bottom" data-bs-content="Bottom popover">
+        Popover on bottom
+      </button>
+      <button type="button" class="btn btn-subtle-neutral" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="left" data-bs-content="Left popover">
+        Popover on left
+      </button>
+    {{/example}}
+
+    <h3>Popover with title</h3>
+    {{#example}}
+      <button type="button" class="btn btn-subtle-neutral" data-bs-toggle="popover" data-bs-title="Popover title" data-bs-content="Here’s some exciting content to explore and enjoy.">Toggle basic popover</button>
+    {{/example}}
+
+    <h3>Custom popovers</h3>
+    {{#example}}
+      <button type="button" class="btn btn-subtle-info"
+          data-bs-toggle="popover" data-bs-placement="right"
+          data-bs-custom-class="custom-popover"
+          data-bs-title="Custom popover"
+          data-bs-content="This popover is themed via CSS variables.">
+          Custom popover
+      </button>
+    {{/example}}
+
+    <h3>Dismiss on next click</h3>
+    {{#example}}
+      <a tabindex="0" class="btn btn-subtle-danger" role="button" data-bs-toggle="popover" data-bs-trigger="focus" data-bs-title="Dismissible popover" data-bs-content="Here’s some exciting content to explore and enjoy.">Dismissible popover</a>
+    {{/example}}
+
+    <h3>Disabled elements</h3>
+    {{#example}}
+      <span class="inline-block" tabindex="0" data-bs-toggle="popover" data-bs-trigger="hover focus" data-bs-content="Disabled popover">
+        <button class="btn btn-primary" type="button" disabled>Disabled button</button>
+      </span>
+    {{/example}}
+  </section>
+
+  <section id="toasts" data-toc="Toasts">
+    {{> section-header title="Toasts" description="The Toast component provides feedback messages that appear temporarily at the edge of the viewport. They can display success, warning, error, or informational states using flexible styles." docs="components/toasts"}}
+
+    <h3>Basic example</h3>
+    {{#example}}
+      <div class="toast show" role="alert" aria-live="assertive" aria-atomic="true">
+        <div class="toast-body">
+          Operation completed successfully.
+        </div>
+      </div>
+    {{/example}}
+
+    <h3>Dismissing</h3>
+    {{#example}}
+      <div class="toast show" role="alert" aria-live="assertive" aria-atomic="true">
+        <div class="flex">
+          <div class="toast-body">
+            Operation completed successfully.
+          </div>
+          <button type="button" class="btn-close m-auto me-2" data-bs-dismiss="toast" aria-label="Close"></button>
+        </div>
+      </div>
+    {{/example}}
+
+    <h3>Toast with title</h3>
+    {{#example}}
+      <div class="toast show" role="alert" aria-live="assertive" aria-atomic="true">
+        <div class="toast-header">
+          <strong class="me-auto">Hummingbird</strong>
+          <small>10 mins ago</small>
+          <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+        </div>
+        <div class="toast-body">
+          Operation completed successfully.
+        </div>
+      </div>
+    {{/example}}
+
+    <h3>Live example</h3>
+    {{#example}}
+      <button type="button" class="btn btn-primary" id="liveToastBtn">Show live toast</button>
+
+      <div class="toast-container fixed top-0 end-0 p-4">
+        <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+          <div class="toast-header">
+            <strong class="me-auto">Hummingbird</strong>
+            <small>10 mins ago</small>
+            <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+          </div>
+          <div class="toast-body">
+            Operation completed successfully.
+          </div>
+        </div>
+      </div>
+    {{/example}}
+
+    <h3>Use with Alerts</h3>
+    {{#example class="flex flex-col gap-2"}}
+      <div class="toast show" role="alert" aria-live="assertive" aria-atomic="true">
+        <div class="alert alert-subtle-warning" role="alert">
+          <svg class="alert-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"><path fill="currentColor" d="M2.725 21q-.275 0-.5-.137t-.35-.363t-.137-.488t.137-.512l9.25-16q.15-.25.388-.375T12 3t.488.125t.387.375l9.25 16q.15.25.138.513t-.138.487t-.35.363t-.5.137zm1.725-2h15.1L12 6zM12 18q.425 0 .713-.288T13 17t-.288-.712T12 16t-.712.288T11 17t.288.713T12 18m0-3q.425 0 .713-.288T13 14v-3q0-.425-.288-.712T12 10t-.712.288T11 11v3q0 .425.288.713T12 15m0-2.5" stroke-width="0.5" stroke="currentColor"/></svg>
+          <span>This ia a warning message.</span>
+          <button class='btn btn-icon btn-icon-warning ms-auto shrink-0' data-bs-dismiss="toast" >
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><path fill="currentColor" d="m12 13.4l-4.9 4.9q-.275.275-.7.275t-.7-.275t-.275-.7t.275-.7l4.9-4.9l-4.9-4.9q-.275-.275-.275-.7t.275-.7t.7-.275t.7.275l4.9 4.9l4.9-4.9q.275-.275.7-.275t.7.275t.275.7t-.275.7L13.4 12l4.9 4.9q.275.275.275.7t-.275.7t-.7.275t-.7-.275z" stroke-width="0.5" stroke="currentColor"/></svg>
+          </button>
+        </div>
+      </div>
+      <div class="toast show" role="alert" aria-live="assertive" aria-atomic="true">
+        <div class="alert alert-outline-success" role="alert">
+          <svg class="alert-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"><path fill="currentColor" d="m10.6 16.6l7.05-7.05l-1.4-1.4l-5.65 5.65l-2.85-2.85l-1.4 1.4zM12 22q-2.075 0-3.9-.788t-3.175-2.137T2.788 15.9T2 12t.788-3.9t2.137-3.175T8.1 2.788T12 2t3.9.788t3.175 2.137T21.213 8.1T22 12t-.788 3.9t-2.137 3.175t-3.175 2.138T12 22m0-2q3.35 0 5.675-2.325T20 12t-2.325-5.675T12 4T6.325 6.325T4 12t2.325 5.675T12 20m0-8" stroke-width="0.5" stroke="currentColor"/></svg>
+          <span>This is a success message.</span>
+          <button class='btn btn-sm btn-circle btn-outline-success ms-auto' data-bs-dismiss="toast">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><path fill="currentColor" d="m12 13.4l-4.9 4.9q-.275.275-.7.275t-.7-.275t-.275-.7t.275-.7l4.9-4.9l-4.9-4.9q-.275-.275-.275-.7t.275-.7t.7-.275t.7.275l4.9 4.9l4.9-4.9q.275-.275.7-.275t.7.275t.275.7t-.275.7L13.4 12l4.9 4.9q.275.275.275.7t-.275.7t-.7.275t-.7-.275z" stroke-width="0.5" stroke="currentColor"/></svg>
+          </button>
+        </div>
+      </div>
+      <div class="toast show" role="alert" aria-live="assertive" aria-atomic="true">
+        <div class="alert alert-danger" role="alert">
+          <svg class="alert-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"><path fill="currentColor" d="M12 17q.425 0 .713-.288T13 16t-.288-.712T12 15t-.712.288T11 16t.288.713T12 17m-1-4h2V7h-2zm1 9q-2.075 0-3.9-.788t-3.175-2.137T2.788 15.9T2 12t.788-3.9t2.137-3.175T8.1 2.788T12 2t3.9.788t3.175 2.137T21.213 8.1T22 12t-.788 3.9t-2.137 3.175t-3.175 2.138T12 22m0-2q3.35 0 5.675-2.325T20 12t-2.325-5.675T12 4T6.325 6.325T4 12t2.325 5.675T12 20m0-8" stroke-width="0.5" stroke="currentColor"/></svg>
+          <span>This is a error message.</span>
+          <button class='btn btn-sm btn-circle btn-danger ms-auto' data-bs-dismiss="toast">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><path fill="currentColor" d="m12 13.4l-4.9 4.9q-.275.275-.7.275t-.7-.275t-.275-.7t.275-.7l4.9-4.9l-4.9-4.9q-.275-.275-.275-.7t.275-.7t.7-.275t.7.275l4.9 4.9l4.9-4.9q.275-.275.7-.275t.7.275t.275.7t-.275.7L13.4 12l4.9 4.9q.275.275.275.7t-.275.7t-.7.275t-.7-.275z" stroke-width="0.5" stroke="currentColor"/></svg>
+          </button>
+        </div>
+      </div>
+    {{/example}}
+
+    <h3>Stacking</h3>
+    {{#example class="[&>.toast-container]:static"}}
+      <div class="toast-container">
+        <div class="toast show" role="alert" aria-live="assertive" aria-atomic="true">
+          <div class="toast-header">
+            <strong class="me-auto">Hummingbird</strong>
+            <small>just now</small>
+            <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+          </div>
+          <div class="toast-body">
+            See? Just like this.
+          </div>
+        </div>
+
+        <div class="toast show" role="alert" aria-live="assertive" aria-atomic="true">
+          <div class="toast-header">
+            <strong class="me-auto">Hummingbird</strong>
+            <small>2 seconds ago</small>
+            <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+          </div>
+          <div class="toast-body">
+            Heads up, toasts will stack automatically
+          </div>
+        </div>
+      </div>
+    {{/example}}
+
+    <h3>Custom content</h3>
+    {{#example}}
+      <div class="toast show" role="alert" aria-live="assertive" aria-atomic="true">
+        <div class="toast-body">
+          Operation completed successfully.
+        </div>
+        <div class="border-t border-subtle py-2 px-3 flex justify-end gap-2">
+          <button class="btn btn-sm btn-subtle-primary">Action</button>
+          <button class="btn btn-sm btn-subtle-secondary">Close</button>
+        </div>
+      </div>
+    {{/example}}
+
+    <h3>Placement</h3>
+    {{#example class="[&_.toast-container]:z-10"}}
+      <form>
+        <div class="form-field mb-4">
+          <label for="selectToastPlacement" class="form-label">Toast placement</label>
+          <select class="form-select-fill" id="selectToastPlacement">
+            <option value="" selected>Select a position...</option>
+            <option value="top-0 start-0">Top left</option>
+            <option value="top-0 start-1/2 -translate-x-1/2">Top center</option>
+            <option value="top-0 end-0">Top right</option>
+            <option value="top-1/2 start-0 -translate-y-1/2">Middle left</option>
+            <option value="top-1/2 start-1/2 -translate-1/2">Middle center</option>
+            <option value="top-1/2 end-0 -translate-y-1/2">Middle right</option>
+            <option value="bottom-0 start-0">Bottom left</option>
+            <option value="bottom-0 start-1/2 -translate-x-1/2">Bottom center</option>
+            <option value="bottom-0 end-0">Bottom right</option>
+          </select>
+        </div>
+      </form>
+      <div aria-live="polite" aria-atomic="true" class="bg-muted relative rounded-lg h-100">
+        <div class="toast-container p-4" id="toastPlacement">
+          <div class="toast show">
+            <div class="toast-header">
+              <strong class="me-auto">Hummingbird</strong>
+              <small>10 mins ago</small>
+            </div>
+            <div class="toast-body">
+              Hello, world! This is a toast message.
+            </div>
+          </div>
+        </div>
+      </div>
+    {{/example}}
+    {{#example class="h-70 [&_.toast-container]:z-10"}}
+      <div aria-live="polite" aria-atomic="true" class="relative">
+        <!-- Position it: -->
+        <!-- - .toast-container for spacing between toasts -->
+        <!-- - .top-0 & .end-0 to position the toasts in the upper right corner -->
+        <!-- - .p-4 to prevent the toasts from sticking to the edge of the container  -->
+        <div class="toast-container top-0 end-0">
+
+          <!-- Then put toasts within -->
+          <div class="toast show" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="toast-header">
+              <strong class="me-auto">Hummingbird</strong>
+              <small>just now</small>
+              <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+            <div class="toast-body">
+              See? Just like this.
+            </div>
+          </div>
+
+          <div class="toast show" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="toast-header">
+              <strong class="me-auto">Hummingbird</strong>
+              <small>2 seconds ago</small>
+              <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+            <div class="toast-body">
+              Heads up, toasts will stack automatically
+            </div>
+          </div>
+        </div>
+      </div>
+    {{/example}}
+    {{#example class="h-70"}}
+      <!-- Flexbox container for aligning the toasts -->
+      <div aria-live="polite " aria-atomic="true" class="flex justify-center items-center w-full h-full">
+
+        <!-- Then put toasts within -->
+        <div class="toast show" role="alert" aria-live="assertive" aria-atomic="true">
+          <div class="toast-header">
+            <strong class="me-auto">Hummingbird</strong>
+            <small>11 mins ago</small>
+            <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+          </div>
+          <div class="toast-body">
+            Hello, world! This is a toast message.
+          </div>
+        </div>
+      </div>
+    {{/example}}
+  </section>
+{{/layout}}

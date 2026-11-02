@@ -1,0 +1,101 @@
+{{#> layout page="overview" hideHeader=true hideToc=true}}
+  <div class="mb-14 flex flex-col items-center">
+    <img src="/src/assets/images/logo.svg" alt="Hummingbird logo" class="mb-6 size-16" />
+    <span class="badge badge-subtle-primary mb-4">Free &amp; open source · MIT</span>
+    <h1 class="mb-4 text-4xl font-semibold sm:text-5xl">{{@root.site.name}}</h1>
+    <p class="mb-8 max-w-3xl text-xl text-center font-light text-muted">{{@root.site.description}}</p>
+    <div class="flex flex-wrap gap-3">
+      <a href="{{@root.root}}pages/colors.html" class="btn btn-primary btn-lg">
+        Explore the kit {{> icons/arrow-right}}
+      </a>
+      <a href="{{@root.site.docsUrl}}" target="_blank" rel="noopener" class="btn btn-outline-neutral btn-lg">
+        Documentation {{> icons/external}}
+      </a>
+    </div>
+  </div>
+
+  <h2 class="mb-1 text-2xl font-semibold">Foundations</h2>
+  <p class="mb-6 text-muted">The design tokens every component is built on.</p>
+  <div class="mb-14 grid gap-5 sm:grid-cols-2 xl:grid-cols-3">
+    <a href="{{@root.root}}pages/colors.html" class="kit-card card card-action">
+      <div class="kit-card-visual">
+        <div class="grid grid-cols-3 gap-2">
+          <span class="size-9 rounded-full bg-primary"></span>
+          <span class="size-9 rounded-full bg-secondary"></span>
+          <span class="size-9 rounded-full bg-info"></span>
+          <span class="size-9 rounded-full bg-success"></span>
+          <span class="size-9 rounded-full bg-warning"></span>
+          <span class="size-9 rounded-full bg-danger"></span>
+        </div>
+      </div>
+      <div class="kit-card-body">
+        <h3 class="kit-card-title">Colors</h3>
+        <p>{{#with (navItem 'colors')}}{{description}}{{/with}}</p>
+      </div>
+    </a>
+    <a href="{{@root.root}}pages/themes.html" class="kit-card card card-action">
+      <div class="kit-card-visual">
+        <div class="flex overflow-hidden rounded-xl border border-default shadow-sm">
+          <div class="flex w-24 flex-col gap-2 bg-white p-3">
+            <span class="h-2 w-12 rounded-full bg-gray-300"></span>
+            <span class="h-2 w-16 rounded-full bg-gray-200"></span>
+            <span class="mt-2 h-5 w-12 rounded-md bg-blue-500"></span>
+          </div>
+          <div class="flex w-24 flex-col gap-2 bg-gray-950 p-3">
+            <span class="h-2 w-12 rounded-full bg-gray-600"></span>
+            <span class="h-2 w-16 rounded-full bg-gray-700"></span>
+            <span class="mt-2 h-5 w-12 rounded-md bg-blue-400"></span>
+          </div>
+        </div>
+      </div>
+      <div class="kit-card-body">
+        <h3 class="kit-card-title">Themes</h3>
+        <p>{{#with (navItem 'themes')}}{{description}}{{/with}}</p>
+      </div>
+    </a>
+    <a href="{{@root.root}}pages/typography.html" class="kit-card card card-action">
+      <div class="kit-card-visual">
+        <span class="text-7xl leading-none font-semibold">Aa</span>
+      </div>
+      <div class="kit-card-body">
+        <h3 class="kit-card-title">Typography</h3>
+        <p>{{#with (navItem 'typography')}}{{description}}{{/with}}</p>
+      </div>
+    </a>
+  </div>
+
+  <h2 class="mb-1 text-2xl font-semibold">Components</h2>
+  <p class="mb-6 text-muted">Every Hummingbird component, grouped by purpose, with live previews and copyable code.</p>
+  <div class="mb-14 grid gap-5 sm:grid-cols-2 xl:grid-cols-3">
+    {{#each @root.site.nav}}
+      {{#each items}}
+        {{#if components}}
+          <a href="{{@root.root}}{{href}}" class="kit-card card card-action">
+            <div class="kit-card-visual">{{> (concat 'illustrations/' page)}}</div>
+            <div class="kit-card-body">
+              <div class="mb-1 flex items-center justify-between gap-2">
+                <h3 class="kit-card-title mb-0">{{name}}</h3>
+                <span class="badge badge-subtle-neutral">{{components.length}} components</span>
+              </div>
+              <p>{{description}}</p>
+            </div>
+          </a>
+        {{/if}}
+      {{/each}}
+    {{/each}}
+  </div>
+
+  <h2 class="mb-1 text-2xl font-semibold">Quick start</h2>
+  <p class="mb-6 text-muted">
+    Requires Node.js 20.19+. Install the dependencies, start the dev server and open
+    <code>http://localhost:3000</code>.
+  </p>
+  {{#code lang="bash"}}
+    npm install
+    npm run dev
+  {{/code}}
+  <p class="text-muted">
+    Run <code>npm run build</code> to export plain static HTML, CSS and JS to <code>dist/</code>. You can upload
+    that folder to any static host.
+  </p>
+{{/layout}}

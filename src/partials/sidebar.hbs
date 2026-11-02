@@ -1,0 +1,33 @@
+<div
+  class="kit-sidebar offcanvas-lg offcanvas-start top-[calc(var(--navbar-height)+53px)] z-1034 w-60 overflow-y-auto lg:sticky lg:top-(--navbar-height) lg:max-h-[calc(100dvh-var(--navbar-height))]"
+  tabindex="-1"
+  id="sidebarOffcanvas"
+  aria-label="Navigation"
+>
+  <button
+    type="button"
+    class="btn btn-icon absolute end-4 top-3 z-10 lg:hidden"
+    data-bs-dismiss="offcanvas"
+    data-bs-target="#sidebarOffcanvas"
+    aria-label="Close"
+  >
+    {{> icons/close}}
+  </button>
+  <div class="offcanvas-body p-6 lg:py-10 lg:ps-0 lg:pe-10">
+    <div class="w-full">
+      {{#each @root.site.nav}}
+        <h2 class="mb-2 text-xs text-subtle uppercase {{#unless @first}}mt-6{{/unless}}">{{label}}</h2>
+        <div class="list-group w-full gap-0.5 bg-transparent">
+          {{#each items}}
+            <a
+              href="{{@root.root}}{{href}}"
+              class="list-group-item list-group-item-action rounded-lg py-2 text-sm {{#if (eq page ../../page)}}active bg-primary-lighter text-primary-dark{{else}}text-default{{/if}}"
+              {{#if (eq page ../../page)}}aria-current="page"{{/if}}
+              >{{name}}</a
+            >
+          {{/each}}
+        </div>
+      {{/each}}
+    </div>
+  </div>
+</div>

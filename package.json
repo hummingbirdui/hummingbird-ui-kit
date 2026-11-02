@@ -1,0 +1,40 @@
+{
+  "name": "hummingbird-ui-kit",
+  "version": "1.0.0",
+  "description": "Free, open-source UI kit built with Hummingbird UI and Tailwind CSS. Plain HTML, powered by Vite.",
+  "license": "MIT",
+  "private": true,
+  "type": "module",
+  "homepage": "https://hbui.dev",
+  "keywords": [
+    "hummingbird",
+    "tailwind",
+    "tailwindcss",
+    "ui kit",
+    "html",
+    "vite",
+    "components"
+  ],
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "format": "prettier --write \"**/*.{html,css,js,json,md}\""
+  },
+  "dependencies": {
+    "@hummingbirdui/hummingbird": "^1.4.1",
+    "choices.js": "^11.2.4",
+    "dropzone": "6.3.5",
+    "flatpickr": "^4.6.13",
+    "nouislider": "^15.8.1"
+  },
+  "devDependencies": {
+    "@shikijs/transformers": "^4.5.0",
+    "@tailwindcss/vite": "^4.3.3",
+    "handlebars": "^4.7.10",
+    "prettier": "^3.9.6",
+    "shiki": "^4.5.0",
+    "tailwindcss": "^4.3.3",
+    "vite": "^8.2.0"
+  }
+}

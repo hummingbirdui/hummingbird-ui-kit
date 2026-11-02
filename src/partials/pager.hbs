@@ -1,0 +1,16 @@
+<div class="mt-16 flex items-center justify-between gap-4">
+  {{#with (prevPage page)}}
+    <a href="{{@root.root}}{{href}}" class="btn btn-subtle-neutral flex-col items-start px-5 py-3">
+      <span class="text-xs text-muted">Previous</span>
+      <span class="text-base font-semibold">{{name}}</span>
+    </a>
+  {{else}}
+    <span></span>
+  {{/with}}
+  {{#with (nextPage page)}}
+    <a href="{{@root.root}}{{href}}" class="btn btn-subtle-neutral flex-col items-end px-5 py-3">
+      <span class="text-xs text-muted">Next</span>
+      <span class="text-base font-semibold">{{name}}</span>
+    </a>
+  {{/with}}
+</div>

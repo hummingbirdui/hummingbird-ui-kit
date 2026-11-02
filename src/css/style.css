@@ -1,0 +1,191 @@
+@import 'tailwindcss';
+@import '@hummingbirdui/hummingbird';
+@import '@hummingbirdui/hummingbird/src/plugins/plugins.css';
+
+/* class-based dark mode, toggled from the navbar */
+@custom-variant dark (&:where(.dark, .dark *), .dark);
+
+/* make sure handlebars partials are scanned for classes */
+@source '../partials/**/*.hbs';
+
+@theme {
+  --font-sans: 'Figtree', ui-sans-serif, system-ui, sans-serif;
+  --container-8xl: 95rem;
+  --navbar-height: --spacing(20.5);
+  --anchor-header-offset: 7.5rem;
+}
+
+html {
+  scroll-padding-top: var(--anchor-header-offset);
+}
+
+/* ---------- Layout ---------- */
+
+.kit-sidebar ~ .offcanvas-backdrop {
+  @apply z-8;
+}
+
+.kit-content {
+  > section + section {
+    @apply mt-16 border-t border-subtle pt-12;
+  }
+
+  /* only the kit's own sub-headings; never headings inside example previews */
+  > section > h3 {
+    @apply mt-10 mb-4 text-lg font-medium;
+  }
+
+  > section > h4 {
+    @apply mt-8 mb-4 text-base font-medium text-muted;
+  }
+
+  > section[id] {
+    @apply scroll-mt-(--anchor-header-offset);
+  }
+}
+
+/* ---------- On this page ---------- */
+
+.kit-toc {
+  @apply list-none ps-4;
+
+  .kit-toc-link {
+    @apply mb-1 flex items-center gap-3 py-1 text-sm text-muted no-underline hover:text-default;
+
+    &::before {
+      content: '';
+      @apply size-1 shrink-0 rounded-full bg-current;
+    }
+
+    &[aria-current='true'] {
+      @apply font-medium text-primary;
+    }
+  }
+}
+
+/* ---------- Example: live preview + source ---------- */
+
+.kit-example {
+  @apply mb-6 rounded-2xl border border-subtle;
+}
+
+.kit-example-preview {
+  @apply rounded-t-2xl bg-default px-6 py-8;
+}
+
+.kit-example-actions {
+  @apply flex justify-end gap-1 rounded-b-2xl border-t border-subtle bg-subtle px-3 py-2;
+
+  .kit-example:has(.collapse.show) &,
+  .kit-example:has(.collapsing) & {
+    @apply rounded-b-none;
+  }
+}
+
+.kit-code {
+  @apply rounded-b-2xl border-t border-subtle bg-subtle;
+
+  pre {
+    @apply m-0 max-h-120 overflow-auto bg-transparent! p-5 text-sm;
+  }
+}
+
+/* shiki dual themes: light by default, dark under .dark */
+.shiki,
+.shiki span {
+  color: var(--shiki-light);
+}
+.dark .shiki,
+.dark .shiki span {
+  color: var(--shiki-dark);
+}
+
+/* ---------- Classes used by a few showcased examples ---------- */
+
+.bg-stripes {
+  @apply border-x bg-size-[8px_8px] bg-top-left bg-[repeating-linear-gradient(315deg,currentColor_0,currentColor_1px,transparent_0,transparent_50%)] text-black/10 dark:text-white/12.5;
+}
+
+.custom-tooltip {
+  --tooltip-bg: var(--color-info);
+  --tooltip-color: var(--color-inverse);
+}
+
+.custom-popover {
+  --popover-max-width: 15rem;
+  --popover-border-color: var(--color-info);
+  --popover-header-bg: var(--color-info);
+  --popover-header-color: var(--color-inverse);
+  --popover-body-padding-x: --spacing(4);
+  --popover-body-padding-y: --spacing(3);
+}
+
+/* grid / column demos: tint the columns so the layout is visible (same as hbui.dev) */
+.example-row [class*='col'],
+.example-cols [class^='col'] > *,
+.example-row-cols [class^='col'] {
+  @apply border border-info-light bg-info-lighter p-3;
+}
+
+.example-row .row + .row {
+  @apply mt-4;
+}
+
+.example-row-flex-cols .row {
+  @apply min-h-40 bg-info-lighter;
+}
+
+.dz-default {
+  @apply m-0! flex items-center;
+}
+
+/* ---------- Color swatches ---------- */
+
+.kit-swatch {
+  @apply flex cursor-pointer flex-col items-start gap-0.5 rounded-xl text-start;
+
+  .kit-swatch-color {
+    @apply mb-1.5 h-16 w-full rounded-xl outline -outline-offset-1 outline-black/10 transition-transform dark:outline-white/10;
+  }
+  &:hover .kit-swatch-color {
+    @apply scale-[1.03];
+  }
+  .kit-swatch-label {
+    @apply text-sm font-medium;
+  }
+  .kit-swatch-sub {
+    @apply text-xs text-muted;
+  }
+}
+
+.kit-palette-swatch {
+  @apply aspect-square w-full cursor-pointer rounded-md outline -outline-offset-1 outline-black/10 transition-transform hover:scale-110 dark:outline-white/10;
+}
+
+.kit-code-standalone {
+  @apply relative mb-6 rounded-2xl border;
+
+  .kit-code-copy {
+    @apply absolute end-2 top-2;
+  }
+}
+
+/* ---------- Overview cards ---------- */
+
+.kit-card {
+  @apply flex h-full flex-col overflow-hidden rounded-2xl bg-default no-underline hover:border-primary;
+
+  .kit-card-visual {
+    @apply flex aspect-[16/9] items-center justify-center border-b border-subtle bg-subtle p-6;
+  }
+  .kit-card-body {
+    @apply px-5 py-4;
+
+    .kit-card-title {
+      @apply mb-1 text-base font-semibold text-default;
+    }
+    p {
+      @apply mb-0 text-sm text-muted;
+    }
+  }
+}
