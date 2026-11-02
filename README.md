@@ -1,5 +1,7 @@
 # Hummingbird UI Kit
 
+**Live preview:** https://hummingbirdui.github.io/hummingbird-ui-kit/
+
 A free, open-source UI kit built with [Hummingbird](https://hbui.dev) and [Tailwind CSS](https://tailwindcss.com). It covers colors, themes, typography and 50 components, all in plain HTML and powered by Vite.
 
 Every example has a live preview with **Show code** and **Copy** buttons, so you can paste the markup straight into your project.
