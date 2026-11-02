@@ -3,6 +3,7 @@ import tailwindcss from '@tailwindcss/vite';
 import { readdirSync } from 'node:fs';
 import { resolve } from 'node:path';
 import htmlKit from './build/html-kit.js';
+import classicScripts from './build/classic-scripts.js';
 
 const root = import.meta.dirname;
 
@@ -14,7 +15,7 @@ const input = Object.fromEntries(
 
 export default defineConfig({
   base: './',
-  plugins: [tailwindcss(), htmlKit()],
+  plugins: [tailwindcss(), htmlKit(), classicScripts()],
   build: {
     rollupOptions: { input },
   },

@@ -1,6 +1,6 @@
 {
   "name": "Hummingbird UI Kit",
-  "description": "A free, open-source UI kit built with Hummingbird and Tailwind CSS. Colors, themes, typography and 50 components, ready to copy into any HTML project.",
+  "description": "A free, open-source UI kit powered by Hummingbird Tailwind component library. Colors, themes, typography and 50 components, ready to copy into any HTML project.",
   "docsUrl": "https://hbui.dev",
   "githubUrl": "https://github.com/hummingbirdui/hummingbird",
   "nav": [

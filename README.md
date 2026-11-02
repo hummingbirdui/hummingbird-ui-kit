@@ -19,24 +19,31 @@ Every example has a live preview with **Show code** and **Copy** buttons, so you
   - Advanced Forms
 - **Light and dark mode** with a toggle that follows the system preference and remembers the user's choice.
 - **Copyable code** for every example, with syntax highlighting.
-- **Plain HTML output:** `npm run build` exports static files that work on any host, even from a subfolder.
+- **Plain HTML output:** the built `dist/` folder opens straight from disk and works on any static host, even from a subfolder.
 - **Advanced form plugins** already set up: [Choices.js](https://github.com/Choices-js/Choices), [flatpickr](https://flatpickr.js.org), [noUiSlider](https://refreshless.com/nouislider/) and [Dropzone](https://www.dropzone.dev).
 
 ## Quick start
 
-Requires **Node.js 20.19+**.
+### Use the ready-made HTML
+
+No install needed. Open `dist/index.html` in your browser, or upload the `dist/` folder to any static host.
+
+### Customize and rebuild
+
+Requires **Node.js 20.19+** and [pnpm](https://pnpm.io). npm works too, but pnpm uses the included lockfile.
 
 ```bash
-npm install
-npm run dev       # http://localhost:3000
+pnpm install
+pnpm dev          # http://localhost:3000
 ```
 
-| Command           | What it does                                |
-| ----------------- | ------------------------------------------- |
-| `npm run dev`     | Start the dev server with live reload       |
-| `npm run build`   | Build static HTML, CSS and JS into `dist/`  |
-| `npm run preview` | Serve the production build locally          |
-| `npm run format`  | Format the JS, CSS, JSON and Markdown files |
+| Command        | What it does                                              |
+| -------------- | --------------------------------------------------------- |
+| `pnpm dev`     | Start the dev server with live reload                     |
+| `pnpm build`   | Build static HTML, CSS and JS into `dist/`                |
+| `pnpm preview` | Serve the production build locally                        |
+| `pnpm zip`     | Build, then package source + `dist/` into `release/*.zip` |
+| `pnpm format`  | Format the JS, CSS, JSON and Markdown files               |
 
 ## Folder structure
 
@@ -56,7 +63,10 @@ hummingbird-ui-kit/
 │   ├── js/advanced-forms.js   # Choices.js, flatpickr, noUiSlider, Dropzone setup
 │   └── assets/images/
 ├── public/                    # Copied as-is (favicon, example images)
-├── build/html-kit.js          # Small Vite plugin: Handlebars partials + code blocks
+├── build/
+│   ├── html-kit.js            # Vite plugin: Handlebars partials + code blocks
+│   ├── classic-scripts.js     # Lets dist/ open straight from disk (file://)
+│   └── zip.js                 # Packages the release zip (pnpm zip)
 └── vite.config.js
 ```
 
